@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
 
-const Search = ({ handleSearch }) => {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    handleSearch(searchTerm);
-  };
+const Search = ({searchTerm, handleSearch }) => {
 
   return (
-    <form onSubmit={handleSubmit} className="search-form">
+    <>
       <input
         type="text"
         value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
+        onChange={(e) => handleSearch(e.target.value)}
         placeholder="Search transactions..."
+        className='form-control'
       />
-      <button type="submit">Search</button>
-    </form>
+      </>
+
   );
 };
 

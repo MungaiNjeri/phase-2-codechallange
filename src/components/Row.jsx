@@ -1,5 +1,5 @@
 import Button from "./Button"
-export default function Row({date, description, category, amount}){
+export default function Row({date, description, category, amount,index,handleDelete}){
     return(
         
         <tr>
@@ -9,7 +9,7 @@ export default function Row({date, description, category, amount}){
             <td>{amount}</td> 
             
             <td>
-                <Button>
+                <Button index={index} handleDelete={handleDelete}>
                     <span>Delete</span>
                 </Button>
             </td>

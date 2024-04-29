@@ -1,8 +1,6 @@
-export default function Button({children}){
-    function handleClick(value){
-        console.log(value)
-    }
+export default function Button({children,index,handleDelete}){
+
     return(
-        <button onClick={()=>handleClick("handle Click")} className="btn btn-sm btn-danger">{children}</button>
+        <button onClick={()=>handleDelete(index)} className="btn btn-sm btn-danger">{children}</button>
     )
 }
